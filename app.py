@@ -67,7 +67,7 @@ st.metric("🚨 High Risk Shipments", high_risk)
 
 
 col1.metric("📦 Total Orders", len(df))
-col2.metric("💰 Total Sales", f"{df['Sales per customer'].sum():,.0f}")
+col2.metric("💰 Total Sales", f"{df['Sales'].sum():,.0f}")
 col3.metric("📈 Average Benefit", f"{df['Benefit per order'].mean():.2f}")
 col4.metric("🚚 Average Shipping Days", f"{df['Days for shipment (scheduled)'].mean():.1f}")
 
