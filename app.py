@@ -36,12 +36,16 @@ st.write("### Supply Chain Risk Dashboard")
 def load_data():
     # Sirf wahi columns jo dashboard/prediction me chahiye
     necessary_cols = [
-        "Order State", 
-        "Late_delivery_risk", 
-        "Benefit per order", 
-        "Days for shipping (real)", 
-        "Days for shipment (scheduled)"
-    ]
+    "Order State",
+    "Late_delivery_risk",
+    "Benefit per order",
+    "Days for shipping (real)",
+    "Days for shipment (scheduled)",
+    "Sales per customer",
+    "Latitude",
+    "Longitude"
+]
+    
     
     # usecols dene se RAM bilkul use nahi hogi aur app turant khul jayegi!
     return pd.read_csv("Cleaned_SupplyChain_Dataset.zip", usecols=necessary_cols)
