@@ -34,6 +34,12 @@ st.write("### Supply Chain Risk Dashboard")
 
 @st.cache_data
 def load_data():
+    # Light loading: Sirf kaam ke columns load honge
+    cols = ["Order State", "Late_delivery_risk"]  # Jo columns aap dashboard me use kar rahe ho
+    return pd.read_csv("Cleaned_SupplyChain_Dataset.csv", usecols=cols)
+
+
+df = load_data()
     return pd.read_csv("Cleaned_SupplyChain_Dataset.csv")
 
 
