@@ -34,7 +34,18 @@ st.write("### Supply Chain Risk Dashboard")
 
 @st.cache_data
 def load_data():
-    return pd.read_csv("Cleaned_SupplyChain_Dataset.zip")
+    # Sirf wahi columns jo dashboard/prediction me chahiye
+    necessary_cols = [
+        "Order State", 
+        "Late_delivery_risk", 
+        "Benefit per order", 
+        "Days for shipping (real)", 
+        "Days for shipment (scheduled)"
+    ]
+    
+    # usecols dene se RAM bilkul use nahi hogi aur app turant khul jayegi!
+    return pd.read_csv("Cleaned_SupplyChain_Dataset.zip", usecols=necessary_cols)
+    
 
 df = load_data()
 st.sidebar.header("🔍 Filters")
