@@ -16,7 +16,7 @@ if page == "🏠 Home":
     st.markdown("""
     ### 🎯 Project Objective
 
-    This AI platform predicts supply chain risks, analyzes shipment performance,
+    This AI platform predicts supply Chain risks, analyzes shipment performance,
     and helps businesses reduce delivery delays using Machine Learning.
 
     ### 👨‍💻 Features
