@@ -32,7 +32,12 @@ if page == "🏠 Home":
 
 st.write("### Supply Chain Risk Dashboard")
 
-df = pd.read_csv("Cleaned_SupplyChain_Dataset.csv")
+@st.cache_data
+def load_data():
+    return pd.read_csv("Cleaned_SupplyChain_Dataset.csv")
+
+
+df = load_data()
 st.sidebar.header("🔍 Filters")
 
 selected_state = st.sidebar.selectbox(
